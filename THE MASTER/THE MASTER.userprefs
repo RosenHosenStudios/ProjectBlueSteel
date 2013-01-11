@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\1 BlueSteel\Wepon Scripts\Bullet.js">
+    <Files>
+      <File FileName="Assets\1 BlueSteel\Enemies\Enemy Scripts\EnhancerChaser.cs" Line="24" Column="3" />
+      <File FileName="Assets\1 BlueSteel\Controller.cs" Line="28" Column="12" />
+      <File FileName="Assets\1 BlueSteel\Wepon Scripts\Bullet.js" Line="5" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
