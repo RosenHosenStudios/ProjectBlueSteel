@@ -6,6 +6,8 @@ public class Controller : MonoBehaviour {
 	int movemult = 15;
 	public GameObject BOOLET;
 	public int bulletSpeed;
+	public float fireInterval;
+	private float nextFire;
 	void Start () {
 	}
 
@@ -25,7 +27,17 @@ public class Controller : MonoBehaviour {
 			transform.Translate(Vector3.right * movemult * Time.deltaTime);
 		}
 		if(Input.GetKey ("up")){
-			fire ();
+			nextFire = Time.time + fireInterval;
+			fire (Vector3.forward);
+		}else if(Input.GetKey ("down")){
+			nextFire = Time.time + fireInterval;
+			fire (Vector3.back);
+		}else if(Input.GetKey ("left")){
+			nextFire = Time.time + fireInterval;
+			fire (Vector3.left);
+		}else if(Input.GetKey ("right")){
+			nextFire = Time.time + fireInterval;
+			fire (Vector3.right);
 		}
 	}
 		
@@ -36,8 +48,9 @@ public class Controller : MonoBehaviour {
 		}
 	}
 	
-	public void fire() {
+	public void fire(Vector3 dir) {
+	
 	GameObject bullet = (GameObject) Instantiate(BOOLET, transform.position, Quaternion.identity);
-	bullet.rigidbody.velocity = transform.forward * bulletSpeed;
+	bullet.rigidbody.velocity = dir * bulletSpeed;
 }
 }
