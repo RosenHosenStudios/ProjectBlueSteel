@@ -6,7 +6,7 @@ public class Controller : MonoBehaviour {
 	int movemult = 15;
 	public GameObject BOOLET;
 	public int bulletSpeed;
-	public float fireInterval;
+	public float fireSpeed;
 	private float nextFire;
 	void Start () {
 	}
@@ -16,6 +16,7 @@ public class Controller : MonoBehaviour {
 	}
 	
 	void Control(){
+		nextFire += Time.deltaTime;
 		if(Input.GetKey("w")){
 			transform.Translate(Vector3.forward * movemult * Time.deltaTime);
 		}else if (Input.GetKey ("s")){
@@ -27,16 +28,12 @@ public class Controller : MonoBehaviour {
 			transform.Translate(Vector3.right * movemult * Time.deltaTime);
 		}
 		if(Input.GetKey ("up")){
-			nextFire = Time.time + fireInterval;
 			fire (Vector3.forward);
 		}else if(Input.GetKey ("down")){
-			nextFire = Time.time + fireInterval;
 			fire (Vector3.back);
 		}else if(Input.GetKey ("left")){
-			nextFire = Time.time + fireInterval;
 			fire (Vector3.left);
 		}else if(Input.GetKey ("right")){
-			nextFire = Time.time + fireInterval;
 			fire (Vector3.right);
 		}
 	}
@@ -48,9 +45,11 @@ public class Controller : MonoBehaviour {
 		}
 	}
 	
-	public void fire(Vector3 dir) {
-	
-	GameObject bullet = (GameObject) Instantiate(BOOLET, transform.position, Quaternion.identity);
-	bullet.rigidbody.velocity = dir * bulletSpeed;
-}
+	public void fire(Vector3 dir) {	
+		if (nextFire >= fireSpeed){
+			GameObject bullet = (GameObject) Instantiate(BOOLET, transform.position, Quaternion.identity);
+			bullet.rigidbody.velocity = dir * bulletSpeed;
+			nextFire =0;
+		}
+	}
 }
