@@ -8,6 +8,8 @@ public class Controller : MonoBehaviour {
 	public int bulletSpeed;
 	public float fireSpeed;
 	private float nextFire;
+	public GameObject aimBot;
+	public Vector3 aim;
 	void Start () {
 	}
 
@@ -27,14 +29,10 @@ public class Controller : MonoBehaviour {
 		}else if (Input.GetKey ("d")){
 			transform.Translate(Vector3.right * movemult * Time.deltaTime);
 		}
-		if(Input.GetKey ("up")){
-			fire (Vector3.forward);
-		}else if(Input.GetKey ("down")){
-			fire (Vector3.back);
-		}else if(Input.GetKey ("left")){
-			fire (Vector3.left);
-		}else if(Input.GetKey ("right")){
-			fire (Vector3.right);
+		if(Input.GetMouseButton (0)){
+			aim = new Vector3 (aimBot.transform.eulerAngles.x,0,aimBot.transform.eulerAngles.z);
+			aim = aim / aim.magnitude;
+			fire (aim);
 		}
 	}
 		
@@ -45,11 +43,15 @@ public class Controller : MonoBehaviour {
 		}
 	}
 	
-	public void fire(Vector3 dir) {	
-		if (nextFire >= fireSpeed){
-			GameObject bullet = (GameObject) Instantiate(BOOLET, transform.position, Quaternion.identity);
-			bullet.rigidbody.velocity = dir * bulletSpeed;
-			nextFire =0;
+	public void fire(Vector3 dir) {
+		try{
+			if (nextFire >= fireSpeed){
+				GameObject bullet = (GameObject) Instantiate(BOOLET, transform.position, Quaternion.identity);
+				bullet.rigidbody.velocity = dir * bulletSpeed;
+				nextFire =0;
+			}
+		} catch (UnityException e) {
 		}
 	}
+	
 }
