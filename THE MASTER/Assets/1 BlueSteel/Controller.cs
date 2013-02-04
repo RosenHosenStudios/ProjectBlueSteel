@@ -8,7 +8,7 @@ public class Controller : MonoBehaviour {
 	public int bulletSpeed;
 	public float fireSpeed;
 	private float nextFire;
-	public GameObject aimBot;
+	public GameObject aimer;
 	public Vector3 aim;
 	void Start () {
 	}
@@ -30,9 +30,7 @@ public class Controller : MonoBehaviour {
 			transform.Translate(Vector3.right * movemult * Time.deltaTime);
 		}
 		if(Input.GetMouseButton (0)){
-			aim = new Vector3 (aimBot.transform.eulerAngles.x,0,aimBot.transform.eulerAngles.z);
-			aim = aim / aim.magnitude;
-			fire (aim);
+			fire (aimWith(aimer));
 		}
 	}
 		
@@ -54,4 +52,10 @@ public class Controller : MonoBehaviour {
 		}
 	}
 	
+	private Vector3 aimWith(GameObject aimBot){
+		float theta = aimBot.transform.eulerAngles.y * Mathf.Deg2Rad;
+		print ("theta = " + theta);
+		aim = new Vector3 (Mathf.Sin(theta),0,Mathf.Cos(theta));
+		return aim;
+	}
 }

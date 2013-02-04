@@ -47,6 +47,7 @@
      <Compile Include="Assets\1 BlueSteel\Controller.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\EnhancerChaser.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\EnhancerSpawner.cs" />
+     <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\GetHit.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\Move.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\MoveEnhancerCloser.cs" />
      <Compile Include="Assets\1 BlueSteel\Global Scripts\LookAtMouse.cs" />
