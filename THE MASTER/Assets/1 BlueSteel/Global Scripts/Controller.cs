@@ -54,7 +54,7 @@ public class Controller : MonoBehaviour {
 	
 	private Vector3 aimWith(GameObject aimBot){
 		float theta = aimBot.transform.eulerAngles.y * Mathf.Deg2Rad;
-		print ("theta = " + theta);
+		// print ("theta = " + theta);
 		aim = new Vector3 (Mathf.Sin(theta),0,Mathf.Cos(theta));
 		return aim;
 	}
