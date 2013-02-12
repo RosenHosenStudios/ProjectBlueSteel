@@ -49,9 +49,10 @@
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\GetHit.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\Move.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\MoveEnhancerCloser.cs" />
-     <Compile Include="Assets\1 BlueSteel\Global Scripts\Controller.cs" />
-     <Compile Include="Assets\1 BlueSteel\Global Scripts\LookAtMouse.cs" />
-     <Compile Include="Assets\1 BlueSteel\Global Scripts\SpawnChasers.cs" />
+     <Compile Include="Assets\1 BlueSteel\Models\Global Scripts\Controller.cs" />
+     <Compile Include="Assets\1 BlueSteel\Models\Global Scripts\LookAtMouse.cs" />
+     <Compile Include="Assets\1 BlueSteel\Models\Global Scripts\SpawnChasers.cs" />
+     <Compile Include="Assets\1 BlueSteel\Wepon Scripts\BulletCollide.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
