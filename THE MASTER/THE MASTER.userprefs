@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\1 BlueSteel\Global Scripts\Controller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\1 BlueSteel\Enemies\Enemy Scripts\GetHit.cs">
     <Files>
-      <File FileName="Assets\1 BlueSteel\Global Scripts\Controller.cs" Line="33" Column="18" />
+      <File FileName="Assets\1 BlueSteel\Enemies\Enemy Scripts\EnhancerSpawner.cs" Line="10" Column="18" />
+      <File FileName="Assets\1 BlueSteel\Wepon Scripts\BulletCollide.cs" Line="7" Column="35" />
+      <File FileName="Assets\1 BlueSteel\Enemies\Enemy Scripts\GetHit.cs" Line="6" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
