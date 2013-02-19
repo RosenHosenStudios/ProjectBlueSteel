@@ -3,11 +3,10 @@ using System.Collections;
 
 public class EnhancerSpawner : MonoBehaviour {
 	public GameObject toSpawn;
-	private double spawnInterval;
+	public double spawnInterval;
 	double clock;
 	void Start () {
 		clock=0;
-		spawnInterval=1.0;
 	}
 	
 	void Update () {

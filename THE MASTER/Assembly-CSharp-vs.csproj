@@ -44,6 +44,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\EnhancerBull.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\EnhancerChaser.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\EnhancerSpawner.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\GetHit.cs" />
