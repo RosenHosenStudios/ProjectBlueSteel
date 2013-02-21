@@ -10,6 +10,10 @@ public class Controller : MonoBehaviour {
 	private float nextFire;
 	public GameObject aimer;
 	public Vector3 aim;
+	public float weapon;
+	public float holster;
+	// I will explain what passthough is for later
+	public float passthrough;
 	void Start () {
 	}
 
@@ -31,6 +35,13 @@ public class Controller : MonoBehaviour {
 		}
 		if(Input.GetMouseButton (0)){
 			fire (aimWith(aimer));
+		}
+		if(Input.GetKeyDown ("e")){
+			passthrough = weapon;
+			weapon = holster;
+			holster = passthrough;
+			
+				
 		}
 	}
 		
