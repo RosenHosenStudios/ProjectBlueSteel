@@ -5,6 +5,7 @@ public class Controller : MonoBehaviour {
 	public int hp = 100;
 	int movemult = 15;
 	public GameObject BOOLET;
+	public GameObject BOOLET1;
 	public int bulletSpeed;
 	public float fireSpeed;
 	private float nextFire;
@@ -33,9 +34,16 @@ public class Controller : MonoBehaviour {
 		}else if (Input.GetKey ("d")){
 			transform.Translate(Vector3.right * movemult * Time.deltaTime);
 		}
+		
 		if(Input.GetMouseButton (0)){
-			fire (aimWith(aimer));
-		}
+			if(weapon == 0){
+			firebullet (aimWith(aimer));
+			}
+			if(weapon == 1){
+				firebullet1 (aimWith (aimer));
+			}
+			}
+
 		if(Input.GetKeyDown ("e")){
 			passthrough = weapon;
 			weapon = holster;
@@ -43,6 +51,7 @@ public class Controller : MonoBehaviour {
 			
 				
 		}
+
 	}
 		
 	public void Damage(int damage){
@@ -52,10 +61,20 @@ public class Controller : MonoBehaviour {
 		}
 	}
 	
-	public void fire(Vector3 dir) {
+	public void firebullet(Vector3 dir) {
 		try{
 			if (nextFire >= fireSpeed){
 				GameObject bullet = (GameObject) Instantiate(BOOLET, transform.position, Quaternion.identity);
+				bullet.rigidbody.velocity = dir * bulletSpeed;
+				nextFire =0;
+			}
+		} catch (UnityException e) {
+		}
+	}
+		public void firebullet1(Vector3 dir) {
+		try{
+			if (nextFire >= fireSpeed){
+				GameObject bullet = (GameObject) Instantiate(BOOLET1, transform.position, Quaternion.identity);
 				bullet.rigidbody.velocity = dir * bulletSpeed;
 				nextFire =0;
 			}
