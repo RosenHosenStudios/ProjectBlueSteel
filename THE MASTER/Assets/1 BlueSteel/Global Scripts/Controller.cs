@@ -36,12 +36,7 @@ public class Controller : MonoBehaviour {
 		}
 		
 		if(Input.GetMouseButton (0)){
-			if(weapon == 0){
 			firebullet (aimWith(aimer));
-			}
-			if(weapon == 1){
-				firebullet1 (aimWith (aimer));
-			}
 			}
 
 		if(Input.GetKeyDown ("e")){
@@ -62,6 +57,7 @@ public class Controller : MonoBehaviour {
 	}
 	
 	public void firebullet(Vector3 dir) {
+		if (weapon == 0) {
 		try{
 			if (nextFire >= fireSpeed){
 				GameObject bullet = (GameObject) Instantiate(BOOLET, transform.position, Quaternion.identity);
@@ -69,10 +65,11 @@ public class Controller : MonoBehaviour {
 				nextFire =0;
 			}
 		} catch (UnityException e) {
+				print ("SOMETHING HAPPEN");
 		}
-	}
-		public void firebullet1(Vector3 dir) {
-		try{
+		}
+		if (weapon == 1) {
+					try{
 			if (nextFire >= fireSpeed){
 				GameObject bullet = (GameObject) Instantiate(BOOLET1, transform.position, Quaternion.identity);
 				bullet.rigidbody.velocity = dir * bulletSpeed;
@@ -80,8 +77,9 @@ public class Controller : MonoBehaviour {
 			}
 		} catch (UnityException e) {
 		}
+		}
+			
 	}
-	
 	private Vector3 aimWith(GameObject aimBot){
 		float theta = aimBot.transform.eulerAngles.y * Mathf.Deg2Rad;
 		// print ("theta = " + theta);
