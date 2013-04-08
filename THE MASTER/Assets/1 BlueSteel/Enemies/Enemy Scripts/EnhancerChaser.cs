@@ -5,7 +5,7 @@ public class EnhancerChaser : MonoBehaviour {
 	private Vector3 pos;
 	private Vector3 plps;
 	private GameObject Target;
-	public int damage;
+	private int damage = 1;
 	float dist;
 	void Start (){
 		Target = GameObject.FindWithTag("Player");

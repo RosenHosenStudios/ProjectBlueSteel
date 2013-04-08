@@ -10,6 +10,7 @@ public class Move : MonoBehaviour {
 	private Vector3 prev;
 	public float mult;
 	private GameObject player;
+	public Vector3 dir; //Designed to be read by other scripts, not edited.
 	void Start(){
 		player = GameObject.FindWithTag("Player");
 	}
@@ -18,7 +19,9 @@ public class Move : MonoBehaviour {
 		plpo=player.transform.position;
 		toGo=plpo-pos;
 		toGo=toGo/toGo.magnitude;
-		transform.Translate(mult*(toGo+prev));
+		dir=mult*(toGo+prev);
+		transform.Translate(dir);
 		prev=toGo;
+		
 	}
 }
