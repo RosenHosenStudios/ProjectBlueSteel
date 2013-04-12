@@ -5,11 +5,16 @@ public class Controller : MonoBehaviour {
 	public int hp = 100;
 	int movemult = 15;
 	public GameObject BOOLET;
+	public GameObject BOOLET1;
 	public int bulletSpeed;
 	public float fireSpeed;
 	private float nextFire;
 	public GameObject aimer;
 	public Vector3 aim;
+	public float weapon;
+	public float holster;
+	// I will explain what passthough is for later
+	public float passthrough;
 	void Start () {
 	}
 
@@ -29,9 +34,19 @@ public class Controller : MonoBehaviour {
 		}else if (Input.GetKey ("d")){
 			transform.Translate(Vector3.right * movemult * Time.deltaTime);
 		}
+		
 		if(Input.GetMouseButton (0)){
-			fire (aimWith(aimer));
+			firebullet (aimWith(aimer));
+			}
+
+		if(Input.GetKeyDown ("e")){
+			passthrough = weapon;
+			weapon = holster;
+			holster = passthrough;
+			
+				
 		}
+
 	}
 		
 	public void Damage(int damage){
@@ -41,7 +56,8 @@ public class Controller : MonoBehaviour {
 		}
 	}
 	
-	public void fire(Vector3 dir) {
+	public void firebullet(Vector3 dir) {
+		if (weapon == 0) {
 		try{
 			if (nextFire >= fireSpeed){
 				GameObject bullet = (GameObject) Instantiate(BOOLET, transform.position, Quaternion.identity);
@@ -49,9 +65,21 @@ public class Controller : MonoBehaviour {
 				nextFire =0;
 			}
 		} catch (UnityException e) {
+				print ("SOMETHING HAPPEN");
 		}
+		}
+		if (weapon == 1) {
+					try{
+			if (nextFire >= fireSpeed){
+				GameObject bullet = (GameObject) Instantiate(BOOLET1, transform.position, Quaternion.identity);
+				bullet.rigidbody.velocity = dir * bulletSpeed;
+				nextFire =0;
+			}
+		} catch (UnityException e) {
+		}
+		}
+			
 	}
-	
 	private Vector3 aimWith(GameObject aimBot){
 		float theta = aimBot.transform.eulerAngles.y * Mathf.Deg2Rad;
 		// print ("theta = " + theta);
