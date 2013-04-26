@@ -7,7 +7,7 @@ public class EnhancerSpawner : MonoBehaviour {
 	double clock;
 	void Start () {
 		clock=0;
-		spawnInterval=1.0;
+		spawnInterval=0.2;
 	}
 	
 	void Update () {
