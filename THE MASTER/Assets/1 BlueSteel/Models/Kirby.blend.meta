@@ -1,36 +1,63 @@
 fileFormatVersion: 2
 guid: 0bdb665fab9eff547b5fab9be7c7b175
 ModelImporter:
+  serializedVersion: 15
   fileIDToRecycleName:
+    100000: UFO_
+    100002: Kirby_Body
+    100004: Globes_MeshPart1
+    100006: Globes_MeshPart0
+    100008: //RootNode
+    100010: Globes
+    100012: Empty
+    400000: UFO_
+    400002: Kirby_Body
+    400004: Globes_MeshPart1
+    400006: Globes_MeshPart0
+    400008: //RootNode
+    400010: Globes
+    400012: Empty
+    2300000: UFO_
+    2300002: Kirby_Body
+    2300004: Globes_MeshPart1
+    2300006: Globes_MeshPart0
+    2300008: Globes
+    3300000: UFO_
+    3300002: Kirby_Body
+    3300004: Globes_MeshPart1
+    3300006: Globes_MeshPart0
+    3300008: Globes
     4300000: Kirby_Body
     4300002: UFO_
     4300004: Globes_MeshPart0
     4300006: Globes_MeshPart1
-    7400000: Default Take //// Kirby
-  serializedVersion: 10
+    7400000: Default Take
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
-    generateAnimations: 3
+    legacyGenerateAnimations: 3
     bakeSimulation: 0
-    splitAnimations: 1
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 2
     clipAnimations: []
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMesh: 0
+    optimizeMeshForGPU: 1
+    weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -40,80 +67,21 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  textMetaNamesToFileIDs:
-    //RootNode:
-      data:
-        first: 1
-        second: a8860100
-      data:
-        first: 4
-        second: 881a0600
-      data:
-        first: 111
-        second: 605fa900
-    Empty:
-      data:
-        first: 1
-        second: ac860100
-      data:
-        first: 4
-        second: 8c1a0600
-    Globes:
-      data:
-        first: 1
-        second: aa860100
-      data:
-        first: 4
-        second: 8a1a0600
-    Globes_MeshPart0:
-      data:
-        first: 1
-        second: a6860100
-      data:
-        first: 4
-        second: 861a0600
-      data:
-        first: 23
-        second: 66182300
-      data:
-        first: 33
-        second: a65a3200
-    Globes_MeshPart1:
-      data:
-        first: 1
-        second: a4860100
-      data:
-        first: 4
-        second: 841a0600
-      data:
-        first: 23
-        second: 64182300
-      data:
-        first: 33
-        second: a45a3200
-    Kirby_Body:
-      data:
-        first: 1
-        second: a2860100
-      data:
-        first: 4
-        second: 821a0600
-      data:
-        first: 23
-        second: 62182300
-      data:
-        first: 33
-        second: a25a3200
-    UFO_:
-      data:
-        first: 1
-        second: a0860100
-      data:
-        first: 4
-        second: 801a0600
-      data:
-        first: 23
-        second: 60182300
-      data:
-        first: 33
-        second: a05a3200
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 
