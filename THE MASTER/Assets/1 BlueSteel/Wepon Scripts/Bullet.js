@@ -1,4 +1,4 @@
-//Makes bullets
+//Breaks Bullets
 var lifeTime = 3;
 function Start() {
 	yield WaitForSeconds(lifeTime);
