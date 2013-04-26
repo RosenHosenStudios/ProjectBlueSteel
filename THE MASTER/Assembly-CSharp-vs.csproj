@@ -54,6 +54,7 @@
      <Compile Include="Assets\1 BlueSteel\Global Scripts\SpawnChasers.cs" />
      <Compile Include="Assets\1 BlueSteel\Wepon Scripts\BulletCollide.cs" />
      <Compile Include="Assets\Csharpgui.cs" />
+     <Compile Include="Assets\Startmenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
