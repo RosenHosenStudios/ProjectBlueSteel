@@ -9,6 +9,7 @@ public class LevelController : MonoBehaviour {
 	public int radius;
 	private GameObject player;
 	void Start() {
+		this.gameObject.audio.Play();
 		player = GameObject.FindWithTag("Player");
 		for(int n=0;n<spawnTimes.Length;n++){
 			spawnTimes[n]=0;
@@ -24,9 +25,9 @@ public class LevelController : MonoBehaviour {
 	}
 	
 	private void playerLock(){
-		Vector3 posRelevant = new Vector3(player.transform.position.x,0,player.transform.position.z);
+		Vector3 posRelevant = new Vector3(player.transform.position.x,12,player.transform.position.z);
 		if(posRelevant.magnitude>radius){
-			Vector3 add = (Vector3.zero-player.transform.position).normalized;
+			Vector3 add = (new Vector3(0,12,0)-player.transform.position).normalized;
 			player.transform.Translate(add);
 		}
 	}

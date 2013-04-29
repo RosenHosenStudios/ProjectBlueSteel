@@ -8,7 +8,7 @@ public class ElectronEnhancer : MonoBehaviour {
 	private Vector3 plpo;	
 	// Player Position
 	private Vector3 toGo;
-	private float dist;
+	public float dist;
 	void Start () {
 		player = GameObject.FindWithTag("Player");
 	}

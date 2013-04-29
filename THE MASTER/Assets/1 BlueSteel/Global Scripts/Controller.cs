@@ -10,15 +10,12 @@ public class Controller : MonoBehaviour {
 	private float nextFire;
 	public GameObject aimer;
 	public Vector3 aim;
-	private int score;
+	public int score;
 	void Start () {
 	}
 
 	void Update () {
 		Control();
-		if (hp<0){
-			pop();
-		}
 	}
 	
 	void Control(){
@@ -33,15 +30,19 @@ public class Controller : MonoBehaviour {
 		}else if (Input.GetKey ("d")){
 			transform.Translate(Vector3.right * movemult * Time.deltaTime);
 		}
+		if(Input.GetKey ("z")){
+			push ();	
+		}
 		if(Input.GetMouseButton (0)){
 			fire (aimWith(aimer));
 		}
 	}
 		
 	public void Damage(int damage){
-		hp=hp-damage;
-		if(hp<=0){
-			Destroy(transform.Find("Kirby").gameObject);
+		if(hp>0){
+			hp-=damage;
+		}else{
+			pop();
 		}
 	}
 	
@@ -72,6 +73,10 @@ public class Controller : MonoBehaviour {
 	}
 	
 	public void pop(){
-	//TODO pop	
+		Application.LoadLevel(Application.loadedLevel-1);
+	}
+	
+	public void push(){
+		Application.LoadLevel(Application.loadedLevel+1);	
 	}
 }

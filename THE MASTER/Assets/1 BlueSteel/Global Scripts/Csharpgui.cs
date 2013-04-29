@@ -21,7 +21,7 @@ public class Csharpgui : MonoBehaviour {
 		GUI.color = Colorhealth;
 		GUIStyle Healthstyle = new GUIStyle();
 		Healthstyle.normal.background = boxcolor;
-		GUI.Box(new Rect(1 + hp,10,50 + 3 * hp,50), ""+hp, Healthstyle);
+		GUI.Box(new Rect(10,10,50 + 3 * hp,50), ""+hp, Healthstyle);
 		Debug.Log (GameObject.Find("Player").GetComponent<Controller>().hp ); 
 	}
 	void Update () {
