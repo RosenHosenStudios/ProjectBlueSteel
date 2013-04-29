@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_1;UNITY_4_0;UNITY_STANDALONE_WIN;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_1_2;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -44,17 +44,23 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\Decay.cs" />
+     <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\ElectronEnhancer.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\EnhancerBull.cs" />
-     <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\EnhancerChaser.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\EnhancerSpawner.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\GetHit.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\GluonMoveB.cs" />
+     <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\HitPlayer.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\Move.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\MoveEnhancerCloser.cs" />
      <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\MoveEnhancerGluon.cs" />
+     <Compile Include="Assets\1 BlueSteel\Enemies\Enemy Scripts\ProtonEnhancer.cs" />
      <Compile Include="Assets\1 BlueSteel\Global Scripts\Controller.cs" />
+     <Compile Include="Assets\1 BlueSteel\Global Scripts\Csharpgui.cs" />
+     <Compile Include="Assets\1 BlueSteel\Global Scripts\LevelController.cs" />
      <Compile Include="Assets\1 BlueSteel\Global Scripts\LookAtMouse.cs" />
      <Compile Include="Assets\1 BlueSteel\Global Scripts\SpawnChasers.cs" />
+     <Compile Include="Assets\1 BlueSteel\Global Scripts\SpedAnimate.cs" />
      <Compile Include="Assets\1 BlueSteel\Wepon Scripts\BulletCollide.cs" />
   </ItemGroup>
   <ItemGroup>

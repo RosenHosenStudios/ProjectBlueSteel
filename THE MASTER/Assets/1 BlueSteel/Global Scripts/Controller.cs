@@ -10,11 +10,15 @@ public class Controller : MonoBehaviour {
 	private float nextFire;
 	public GameObject aimer;
 	public Vector3 aim;
+	private int score;
 	void Start () {
 	}
 
 	void Update () {
 		Control();
+		if (hp<0){
+			pop();
+		}
 	}
 	
 	void Control(){
@@ -52,10 +56,22 @@ public class Controller : MonoBehaviour {
 		}
 	}
 	
+	public void addScore(int points){
+		score+=points;
+	}
+	
+	public int getScore(){
+		return score;
+	}
+	
 	private Vector3 aimWith(GameObject aimBot){
 		float theta = aimBot.transform.eulerAngles.y * Mathf.Deg2Rad;
 		// print ("theta = " + theta);
 		aim = new Vector3 (Mathf.Sin(theta),0,Mathf.Cos(theta));
 		return aim;
+	}
+	
+	public void pop(){
+	//TODO pop	
 	}
 }

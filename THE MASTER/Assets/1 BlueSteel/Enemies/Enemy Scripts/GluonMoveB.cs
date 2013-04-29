@@ -15,7 +15,7 @@ public class GluonMoveB : MonoBehaviour {
 		}
 		tCycle+=Time.deltaTime;
 		offset=Mathf.Sin(tCycle);
-		transform.Translate(getNormal(moveScript.dir)*offset);
+		transform.Translate(getNormal(moveScript.getDir())*offset);
 	}
 	
 	private Vector3 getNormal(Vector3 v){

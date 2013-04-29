@@ -15,12 +15,12 @@ public class MoveEnhancerGluon : MonoBehaviour {
 		}
 		tCycle+=Time.deltaTime;
 		offset=Mathf.Sin(tCycle);
-		transform.Translate(getRVector(moveScript.dir)*offset);
+		transform.Translate(getRVector(moveScript.getDir())*offset);
 	}
 	
 	private Vector3 getRVector(Vector3 v){
 		Vector3 n = new Vector3(v.z, v.y, -v.x);
-		n.Normalize();
+		//n.Normalize();
 		return n;
 	}
 }
